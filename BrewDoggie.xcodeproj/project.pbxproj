@@ -13,6 +13,9 @@
 		D55DDF1525BC45FD00094481 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55DDF1425BC45FD00094481 /* Preview Assets.xcassets */; };
 		D55DDF2025BC45FD00094481 /* BrewDoggieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF1F25BC45FD00094481 /* BrewDoggieTests.swift */; };
 		D55DDF2B25BC45FE00094481 /* BrewDoggieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF2A25BC45FE00094481 /* BrewDoggieUITests.swift */; };
+		D55DDF3E25BC87E100094481 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF3D25BC87E100094481 /* Recipe.swift */; };
+		D55DDF4725BC923D00094481 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF4625BC923D00094481 /* ModelData.swift */; };
+		D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF4E25BD675500094481 /* RecipeDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		D55DDF2625BC45FE00094481 /* BrewDoggieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewDoggieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55DDF2A25BC45FE00094481 /* BrewDoggieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewDoggieUITests.swift; sourceTree = "<group>"; };
 		D55DDF2C25BC45FE00094481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55DDF3D25BC87E100094481 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		D55DDF4625BC923D00094481 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D55DDF4E25BD675500094481 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		D55DDF0C25BC45F800094481 /* BrewDoggie */ = {
 			isa = PBXGroup;
 			children = (
+				D55DDF3C25BC465A00094481 /* Views */,
+				D55DDF3B25BC465200094481 /* Model */,
 				D55DDF0D25BC45F800094481 /* BrewDoggieApp.swift */,
 				D55DDF0F25BC45F800094481 /* ContentView.swift */,
 				D55DDF1125BC45FD00094481 /* Assets.xcassets */,
@@ -128,6 +136,31 @@
 				D55DDF2C25BC45FE00094481 /* Info.plist */,
 			);
 			path = BrewDoggieUITests;
+			sourceTree = "<group>";
+		};
+		D55DDF3B25BC465200094481 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D55DDF3D25BC87E100094481 /* Recipe.swift */,
+				D55DDF4625BC923D00094481 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D55DDF3C25BC465A00094481 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D55DDF4525BC90FE00094481 /* Recipes */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D55DDF4525BC90FE00094481 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				D55DDF4E25BD675500094481 /* RecipeDetail.swift */,
+			);
+			path = Recipes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55DDF3E25BC87E100094481 /* Recipe.swift in Sources */,
+				D55DDF4725BC923D00094481 /* ModelData.swift in Sources */,
+				D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */,
 				D55DDF1025BC45F800094481 /* ContentView.swift in Sources */,
 				D55DDF0E25BC45F800094481 /* BrewDoggieApp.swift in Sources */,
 			);
