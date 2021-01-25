@@ -12,6 +12,7 @@ struct Recipe: Identifiable {
     var id = UUID()
     var name: String
     var instructions: String
+    var isFavorite = false
 
     var recipeType: RecipeType
     enum RecipeType: String, CaseIterable, Codable {
@@ -21,15 +22,16 @@ struct Recipe: Identifiable {
         case other = "Other"
     }
 
-    var items = [RecipeItem]()
+    var imageName: String
+    var image: Image {
+        Image(imageName)
+    }
 
-//    private var imageName: String
-//    var image: Image {
-//        Image(imageName)
-//    }
+    var items = [RecipeItem]()
 }
 
-struct RecipeItem {
+struct RecipeItem: Identifiable {
+    var id = UUID()
     var item: String
     var amount: String
     var measurement: String

@@ -16,6 +16,10 @@
 		D55DDF3E25BC87E100094481 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF3D25BC87E100094481 /* Recipe.swift */; };
 		D55DDF4725BC923D00094481 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF4625BC923D00094481 /* ModelData.swift */; };
 		D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF4E25BD675500094481 /* RecipeDetail.swift */; };
+		D55DDF5725BD711E00094481 /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF5625BD711E00094481 /* RecipeImage.swift */; };
+		D5E52F2125BEFA17000E4774 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E52F2025BEFA17000E4774 /* RecipeRow.swift */; };
+		D5E52F2625BF094A000E4774 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E52F2525BF094A000E4774 /* RecipeList.swift */; };
+		D5E52F2C25BF53AA000E4774 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E52F2B25BF53AA000E4774 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		D55DDF3D25BC87E100094481 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D55DDF4625BC923D00094481 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D55DDF4E25BD675500094481 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		D55DDF5625BD711E00094481 /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
+		D5E52F2025BEFA17000E4774 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+		D5E52F2525BF094A000E4774 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		D5E52F2B25BF53AA000E4774 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +112,6 @@
 				D55DDF3C25BC465A00094481 /* Views */,
 				D55DDF3B25BC465200094481 /* Model */,
 				D55DDF0D25BC45F800094481 /* BrewDoggieApp.swift */,
-				D55DDF0F25BC45F800094481 /* ContentView.swift */,
 				D55DDF1125BC45FD00094481 /* Assets.xcassets */,
 				D55DDF1625BC45FD00094481 /* Info.plist */,
 				D55DDF1325BC45FD00094481 /* Preview Content */,
@@ -150,6 +157,8 @@
 		D55DDF3C25BC465A00094481 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5E52F2A25BF5393000E4774 /* Helpers */,
+				D55DDF0F25BC45F800094481 /* ContentView.swift */,
 				D55DDF4525BC90FE00094481 /* Recipes */,
 			);
 			path = Views;
@@ -159,8 +168,19 @@
 			isa = PBXGroup;
 			children = (
 				D55DDF4E25BD675500094481 /* RecipeDetail.swift */,
+				D55DDF5625BD711E00094481 /* RecipeImage.swift */,
+				D5E52F2025BEFA17000E4774 /* RecipeRow.swift */,
+				D5E52F2525BF094A000E4774 /* RecipeList.swift */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		D5E52F2A25BF5393000E4774 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5E52F2B25BF53AA000E4774 /* FavoriteButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +313,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55DDF3E25BC87E100094481 /* Recipe.swift in Sources */,
+				D55DDF5725BD711E00094481 /* RecipeImage.swift in Sources */,
 				D55DDF4725BC923D00094481 /* ModelData.swift in Sources */,
+				D5E52F2C25BF53AA000E4774 /* FavoriteButton.swift in Sources */,
 				D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */,
 				D55DDF1025BC45F800094481 /* ContentView.swift in Sources */,
 				D55DDF0E25BC45F800094481 /* BrewDoggieApp.swift in Sources */,
+				D5E52F2125BEFA17000E4774 /* RecipeRow.swift in Sources */,
+				D5E52F2625BF094A000E4774 /* RecipeList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
