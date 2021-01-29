@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        RecipeList()
+        RecipeView()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static private var modelData = ModelData()
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData())
+            .environmentObject(modelData)
     }
 }

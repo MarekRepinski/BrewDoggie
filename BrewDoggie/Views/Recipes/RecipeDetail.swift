@@ -52,6 +52,7 @@ struct RecipeDetail: View {
             
             VStack(alignment: .leading) {
                 Text("\(recipe.instructions)")
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, 15)
         }

@@ -10,11 +10,98 @@ import Foundation
 class ModelData: ObservableObject {
     @Published var recipies = [Recipe]()
     
+    var categories: [String: [Recipe]] {
+        Dictionary(
+            grouping: recipies,
+            by: { $0.recipeType.rawValue}
+        )
+    }
+    
     init() {
         addMockData()
     }
     
     func addMockData() {
+        recipies.append(Recipe(
+            name: "Dricku",
+            instructions: "Boil water with a juniper twigs in. While it is boiling, take out a bucket with a tap in the bottom, put juniper twigs in the bottom as a strainer, put the malt over and when the juniper boils, beat the layer over the malt. After 2 hours open the tap so that it flows a small jet. Then boil and add sugar and hops. When the layer has cooled to about 30 degrees, add the yeast: leave to ferment for 3-4 days, taste if more sugar needs to be added (depending on how hot the drink is), pour on a little sugar about every 3 days (a little to taste and taste). You can start drinking the drink after about a week, but it is best at about 14 days.",
+            isFavorite: false,
+            recipeType: .other,
+            imageName: "dricku2",
+            items: [
+                RecipeItem(item: "Malt", amount: "2,5", measurement: "kg"),
+                RecipeItem(item: "Water", amount: "10", measurement: "liters"),
+                RecipeItem(item: "Hops", amount: "50", measurement: "g"),
+                RecipeItem(item: "Sugar", amount: "6", measurement: "kg"),
+                RecipeItem(item: "Brown Sugar", amount: "2", measurement: "kg"),
+                RecipeItem(item: "Juniper", amount: "", measurement: "2-3 branches"),
+                RecipeItem(item: "Yeast", amount: "1/4", measurement: "pkt")]
+            )
+        )
+        recipies.append(Recipe(
+            name: "Standard",
+            instructions: "Use this if you don't care about keeping track of recipies.",
+            isFavorite: false,
+            recipeType: .other,
+            imageName: "otherStandard",
+            items: [
+                RecipeItem(item: "Malt", amount: "2", measurement: "kg"),
+                RecipeItem(item: "Water", amount: "6", measurement: "liters"),
+                RecipeItem(item: "Juniper", amount: "1", measurement: "kg"),
+                RecipeItem(item: "Yeast", amount: "-", measurement: "see instructions")]
+            )
+        )
+        recipies.append(Recipe(
+            name: "Viking Mead",
+            instructions: "Heat about 2 liters of water, dissolve the honey and malt. Cook. Let boil for 45 minutes. Pour 10 liters of cold water into the ice bucket. Pour on the brew, fill with water to the 20 liter mark. Add the yeast and stir. Leave with a towel over. When foam has formed on the surface, takes about a day, the fermentation has begun. Add 5 dl sugar and stir. After another two days, add 1 kg of sugar and 2 liters of water. When the fermentation starts to slow down, add the rest of the sugar and water. After another three weeks when the mead is completely fermented. Fill it in a Carboy..",
+            isFavorite: false,
+            recipeType: .mead,
+            imageName: "meadRecipe",
+            items: [
+                RecipeItem(item: "Malt", amount: "2,5", measurement: "kg"),
+                RecipeItem(item: "Honey", amount: "4", measurement: "kg"),
+                RecipeItem(item: "Sugar", amount: "2,5", measurement: "kg"),
+                RecipeItem(item: "Yeast", amount: "1", measurement: "pkt")]
+            )
+        )
+        recipies.append(Recipe(
+            name: "Standard",
+            instructions: "Use this if you don't care about keeping track of recipies.",
+            isFavorite: false,
+            recipeType: .mead,
+            imageName: "meadStandard",
+            items: [
+                RecipeItem(item: "Water", amount: "10", measurement: "liters"),
+                RecipeItem(item: "Honey", amount: "1", measurement: "kg"),
+                RecipeItem(item: "Yeast", amount: "-", measurement: "see instructions")]
+            )
+        )
+        recipies.append(Recipe(
+            name: "Standard",
+            instructions: "Use this if you don't care about keeping track of recipies.",
+            isFavorite: false,
+            recipeType: .beer,
+            imageName: "beerStandard",
+            items: [
+                RecipeItem(item: "Malt", amount: "2,5", measurement: "kg"),
+                RecipeItem(item: "Water", amount: "10", measurement: "liters"),
+                RecipeItem(item: "Hops", amount: "100", measurement: "g"),
+                RecipeItem(item: "Yeast", amount: "-", measurement: "see instructions")]
+            )
+        )
+        recipies.append(Recipe(
+            name: "Standard",
+            instructions: "Use this if you don't care about keeping track of recipies.",
+            isFavorite: false,
+            recipeType: .wine,
+            imageName: "wineStandard",
+            items: [
+                RecipeItem(item: "Fruit", amount: "6", measurement: "kg"),
+                RecipeItem(item: "Water", amount: "8", measurement: "liters"),
+                RecipeItem(item: "Sugar", amount: "2,8", measurement: "kg"),
+                RecipeItem(item: "Wine yeast", amount: "-", measurement: "see instructions")]
+            )
+        )
         recipies.append(Recipe(
             name: "Apple wine",
             instructions: "Dice apples, with peel and core, mix with rowanberries in a wine damejeanne or ice bucket. Add lukewarm water (ideal temperature 25-30 degrees), vitamin B, yeast nutrient and yeast. Stir and let stand for 3 days. Strain off the fruit remains. Mix in the sugar and stir until dissolved. Adjust to 10 liters volume with lukewarm water and let the wine ferment for a few more days. The sugar content must have dropped significantly. Taste it too. Redraw it to a new vessel without the bottom set. After a few days, you can finish the fermentation with a little Campden powder to be sure that it does not continue to ferment after bottling.",
@@ -23,6 +110,23 @@ class ModelData: ObservableObject {
             imageName: "AppleWineRecipe2x",
             items: [
                 RecipeItem(item: "Apples", amount: "6", measurement: "kg"),
+                RecipeItem(item: "Rowan berries", amount: "0,5", measurement: "kg"),
+                RecipeItem(item: "Water", amount: "8", measurement: "liters"),
+                RecipeItem(item: "Sugar", amount: "2,8", measurement: "kg"),
+                RecipeItem(item: "Campden powder", amount: "1", measurement: "g"),
+                RecipeItem(item: "B-vitamin", amount: "6", measurement: "mg"),
+                RecipeItem(item: "Yeast nutrient", amount: "3", measurement: "g"),
+                RecipeItem(item: "Wine yeast", amount: "-", measurement: "see instructions")]
+            )
+        )
+        recipies.append(Recipe(
+            name: "Pear wine",
+            instructions: "Dice pears, with peel and core, mix with rowanberries in a wine damejeanne or ice bucket. Add lukewarm water (ideal temperature 25-30 degrees), vitamin B, yeast nutrient and yeast. Stir and let stand for 3 days. Strain off the fruit remains. Mix in the sugar and stir until dissolved. Adjust to 10 liters volume with lukewarm water and let the wine ferment for a few more days. The sugar content must have dropped significantly. Taste it too. Redraw it to a new vessel without the bottom set. After a few days, you can finish the fermentation with a little Campden powder to be sure that it does not continue to ferment after bottling.",
+            isFavorite: true,
+            recipeType: .wine,
+            imageName: "pearWine",
+            items: [
+                RecipeItem(item: "Pears", amount: "6", measurement: "kg"),
                 RecipeItem(item: "Rowan berries", amount: "0,5", measurement: "kg"),
                 RecipeItem(item: "Water", amount: "8", measurement: "liters"),
                 RecipeItem(item: "Sugar", amount: "2,8", measurement: "kg"),
