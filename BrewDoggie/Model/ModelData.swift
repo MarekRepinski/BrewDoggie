@@ -152,5 +152,21 @@ class ModelData: ObservableObject {
                 RecipeItem(item: "Liquid yeast", amount: "1", measurement: "pack")]
             )
         )
+        recipies.append(Recipe(
+            name: "Belgian Lager",
+            instructions: "Boil 5 liters of water together with 500g Light Dry Malt in a large saucepan (~ 8 l). Add Hallertau Hersbrucker hops and cook for 5 minutes. Remove the pan from the heat. Put the saucepan in a cold water bath for 15 minutes. Then strain the liquid into the fermenter. Add the beer batch and the malt extract to the fermenter. Stir. Fill with cold water to the mark for 20 liters. Stir. Check the temperature and top up with hot or cold water to reach 23 liters and 18 ° C. Stir. Sprinkle the dry yeast (both bags) over the surface of the fermenter and put on the lid. Place the fermenter away from direct sunlight and leave to ferment at as close to 12-15 ° C as possible. The fermentation should take a total of about 12-20 days. Starting from day 7, measure the density daily. The fermentation is complete when the density is stable over 2 days. The FG value should be about 1008.",
+            recipeType: .beer,
+            imageName: "belgianLager",
+            items: [
+                RecipeItem(item: "Malt: Aromatic", amount: "200", measurement: "g"),
+                RecipeItem(item: "Malt: Dark Candy", amount: "200", measurement: "g"),
+                RecipeItem(item: "Malt: Pale Malt", amount: "2", measurement: "kg"),
+                RecipeItem(item: "Water", amount: "10", measurement: "liters"),
+                RecipeItem(item: "Alpha acid: Amarillo", amount: "8", measurement: "g"),
+                RecipeItem(item: "Alpha acid: East Kent", amount: "20", measurement: "g"),
+                RecipeItem(item: "Alpha acid: Cascade", amount: "100", measurement: "g"),
+                RecipeItem(item: "Liquid yeast", amount: "1", measurement: "pack")]
+            )
+        )
     }
 }
