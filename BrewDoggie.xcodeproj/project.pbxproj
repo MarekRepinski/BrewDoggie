@@ -17,6 +17,7 @@
 		D55DDF4725BC923D00094481 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF4625BC923D00094481 /* ModelData.swift */; };
 		D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF4E25BD675500094481 /* RecipeDetail.swift */; };
 		D55DDF5725BD711E00094481 /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF5625BD711E00094481 /* RecipeImage.swift */; };
+		D56F232C25C76C0C00F39CD1 /* BrewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56F232B25C76C0C00F39CD1 /* BrewType.swift */; };
 		D572A50C25C30239002EBF31 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572A50B25C30239002EBF31 /* RecipeView.swift */; };
 		D572A51125C350F3002EBF31 /* RecipeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572A51025C350F3002EBF31 /* RecipeCategoryView.swift */; };
 		D572A51D25C6EBF7002EBF31 /* Brew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572A51C25C6EBF7002EBF31 /* Brew.swift */; };
@@ -59,6 +60,7 @@
 		D55DDF4625BC923D00094481 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D55DDF4E25BD675500094481 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		D55DDF5625BD711E00094481 /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
+		D56F232B25C76C0C00F39CD1 /* BrewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewType.swift; sourceTree = "<group>"; };
 		D572A50B25C30239002EBF31 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		D572A51025C350F3002EBF31 /* RecipeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryView.swift; sourceTree = "<group>"; };
 		D572A51C25C6EBF7002EBF31 /* Brew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brew.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				D55DDF3D25BC87E100094481 /* Recipe.swift */,
 				D55DDF4625BC923D00094481 /* ModelData.swift */,
 				D572A51C25C6EBF7002EBF31 /* Brew.swift */,
+				D56F232B25C76C0C00F39CD1 /* BrewType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				D55DDF4725BC923D00094481 /* ModelData.swift in Sources */,
 				D5E52F2C25BF53AA000E4774 /* FavoriteButton.swift in Sources */,
 				D572A50C25C30239002EBF31 /* RecipeView.swift in Sources */,
+				D56F232C25C76C0C00F39CD1 /* BrewType.swift in Sources */,
 				D572A51D25C6EBF7002EBF31 /* Brew.swift in Sources */,
 				D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */,
 				D55DDF1025BC45F800094481 /* ContentView.swift in Sources */,

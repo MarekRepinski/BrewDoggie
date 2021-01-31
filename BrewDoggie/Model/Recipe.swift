@@ -14,13 +14,7 @@ struct Recipe: Identifiable {
     var instructions: String
     var isFavorite = false
 
-    var recipeType: RecipeType
-    enum RecipeType: String, CaseIterable, Codable {
-        case Awine = "Wine"
-        case Bbeer = "Beer"
-        case Cmead = "Mead"
-        case Dother = "Other"
-    }
+    var recipeType: BrewType.BrewTypes
     
     var imageName: String
     var image: Image {

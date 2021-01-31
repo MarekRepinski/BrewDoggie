@@ -18,13 +18,7 @@ struct Brew: Identifiable {
     var originalGravity: Decimal
     var isOnGoing = false
 
-    var brewType: BrewType
-    enum brewType: String, CaseIterable, Codable {
-        case wine = "Wine"
-        case beer = "Beer"
-        case mead = "Mead"
-        case other = "Other"
-    }
+    var brewType: BrewType.BrewTypes
 
     var imageName: String
     var image: Image {
@@ -39,13 +33,4 @@ struct BrewItem: Identifiable {
     var checkDate: Date
     var gravity: Decimal
     var comment: String
-}
-
-struct BrewType {
-    enum brewType: String, CaseIterable, Codable {
-        case wine = "Wine"
-        case beer = "Beer"
-        case mead = "Mead"
-        case other = "Other"
-    }
 }
