@@ -16,12 +16,12 @@ struct Recipe: Identifiable {
 
     var recipeType: RecipeType
     enum RecipeType: String, CaseIterable, Codable {
-        case wine = "Wine"
-        case beer = "Beer"
-        case mead = "Mead"
-        case other = "Other"
+        case Awine = "Wine"
+        case Bbeer = "Beer"
+        case Cmead = "Mead"
+        case Dother = "Other"
     }
-
+    
     var imageName: String
     var image: Image {
         Image(imageName)

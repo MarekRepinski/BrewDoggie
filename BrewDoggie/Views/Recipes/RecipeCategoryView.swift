@@ -19,10 +19,14 @@ struct RecipeCategoryView: View {
                     .frame(height: 200)
                     .clipped()
 
-                ForEach(modelData.categories.keys.reversed(), id: \.self) { key in
-                    CategoryRow(categoryName: key,
-                    items: modelData.categories[key]!)
+                ForEach(modelData.catagoryNames, id: \.self) {name in
+                    CategoryRow(categoryName: name, items: modelData.recipeCategories[name]!)
+                    .listRowInsets(EdgeInsets())
                 }
+                
+//                ForEach(modelData.recipeCategories.keys.sorted(), id: \.self) { key in
+//                    CategoryRow(categoryName: key, items: modelData.recipeCategories[key]!)
+//                }
                 .listRowInsets(EdgeInsets())
             }
             .listStyle(InsetListStyle())

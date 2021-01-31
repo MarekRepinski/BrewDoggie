@@ -19,6 +19,7 @@
 		D55DDF5725BD711E00094481 /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DDF5625BD711E00094481 /* RecipeImage.swift */; };
 		D572A50C25C30239002EBF31 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572A50B25C30239002EBF31 /* RecipeView.swift */; };
 		D572A51125C350F3002EBF31 /* RecipeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572A51025C350F3002EBF31 /* RecipeCategoryView.swift */; };
+		D572A51D25C6EBF7002EBF31 /* Brew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572A51C25C6EBF7002EBF31 /* Brew.swift */; };
 		D5E52F2125BEFA17000E4774 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E52F2025BEFA17000E4774 /* RecipeRow.swift */; };
 		D5E52F2625BF094A000E4774 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E52F2525BF094A000E4774 /* RecipeList.swift */; };
 		D5E52F2C25BF53AA000E4774 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E52F2B25BF53AA000E4774 /* FavoriteButton.swift */; };
@@ -60,6 +61,7 @@
 		D55DDF5625BD711E00094481 /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
 		D572A50B25C30239002EBF31 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		D572A51025C350F3002EBF31 /* RecipeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryView.swift; sourceTree = "<group>"; };
+		D572A51C25C6EBF7002EBF31 /* Brew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brew.swift; sourceTree = "<group>"; };
 		D5E52F2025BEFA17000E4774 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
 		D5E52F2525BF094A000E4774 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		D5E52F2B25BF53AA000E4774 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				D55DDF3D25BC87E100094481 /* Recipe.swift */,
 				D55DDF4625BC923D00094481 /* ModelData.swift */,
+				D572A51C25C6EBF7002EBF31 /* Brew.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 		D55DDF3C25BC465A00094481 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D572A51B25C6EBD9002EBF31 /* Brews */,
 				D5E52F2A25BF5393000E4774 /* Helpers */,
 				D55DDF0F25BC45F800094481 /* ContentView.swift */,
 				D55DDF4525BC90FE00094481 /* Recipes */,
@@ -179,6 +183,13 @@
 				D572A51025C350F3002EBF31 /* RecipeCategoryView.swift */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		D572A51B25C6EBD9002EBF31 /* Brews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Brews;
 			sourceTree = "<group>";
 		};
 		D5E52F2A25BF5393000E4774 /* Helpers */ = {
@@ -323,6 +334,7 @@
 				D55DDF4725BC923D00094481 /* ModelData.swift in Sources */,
 				D5E52F2C25BF53AA000E4774 /* FavoriteButton.swift in Sources */,
 				D572A50C25C30239002EBF31 /* RecipeView.swift in Sources */,
+				D572A51D25C6EBF7002EBF31 /* Brew.swift in Sources */,
 				D55DDF4F25BD675500094481 /* RecipeDetail.swift in Sources */,
 				D55DDF1025BC45F800094481 /* ContentView.swift in Sources */,
 				D55DDF0E25BC45F800094481 /* BrewDoggieApp.swift in Sources */,
