@@ -19,11 +19,67 @@ class ModelData: ObservableObject {
         )
     }
     
+    var brewCategories: [String: [Brew]] {
+        Dictionary(
+            grouping: brews,
+            by: { $0.brewType.rawValue}
+        )
+    }
+    
     init() {
         addMockData()
     }
     
     func addMockData() {
+        brews.append(Brew(
+            name: "My first Beer",
+            startDate: DateComponents(calendar: Calendar.current, year: 2020, month: 11, day: 1).date!,
+            finishDate: DateComponents(calendar: Calendar.current, year: 2020, month: 11, day: 21).date!,
+            notificationDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 21).date!,
+            originalGravity: 1.050,
+            isOnGoing: false,
+            brewType: .beer,
+            imageName: "myBeer1",
+            items: [
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 11, day: 5).date!,
+                         gravity: 1.040,
+                         comment: "Just a peek"),
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 11, day: 12).date!,
+                         gravity: 1.030,
+                         comment: "Change bucket"),
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 11, day: 19).date!,
+                         gravity: 1.010,
+                         comment: "Added acid to stop fermenting"),
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 11, day: 20).date!,
+                         gravity: 1.005,
+                         comment: "Botteling"),
+            ]
+        ))
+        brews.append(Brew(
+            name: "My first Applewine",
+            startDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 1).date!,
+            finishDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 21).date!,
+            notification: false,
+            notificationDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 21).date!,
+            originalGravity: 1.050,
+            isOnGoing: false,
+            brewType: .wine,
+            imageName: "myAppleWine1",
+            items: [
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 5).date!,
+                         gravity: 1.040,
+                         comment: "Just a peek"),
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 12).date!,
+                         gravity: 1.030,
+                         comment: "Change bucket"),
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 19).date!,
+                         gravity: 1.010,
+                         comment: "Added acid to stop fermenting"),
+                BrewItem(checkDate: DateComponents(calendar: Calendar.current, year: 2020, month: 12, day: 20).date!,
+                         gravity: 1.005,
+                         comment: "Botteling"),
+            ]
+        ))
         recipies.append(Recipe(
             name: "Dricku",
             instructions: "Boil water with a juniper twigs in. While it is boiling, take out a bucket with a tap in the bottom, put juniper twigs in the bottom as a strainer, put the malt over and when the juniper boils, beat the layer over the malt. After 2 hours open the tap so that it flows a small jet. Then boil and add sugar and hops. When the layer has cooled to about 30 degrees, add the yeast: leave to ferment for 3-4 days, taste if more sugar needs to be added (depending on how hot the drink is), pour on a little sugar about every 3 days (a little to taste and taste). You can start drinking the drink after about a week, but it is best at about 14 days.",

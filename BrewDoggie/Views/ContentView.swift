@@ -28,7 +28,7 @@ struct ContentView: View {
                             .navigationBarTitle("")
                             .navigationBarHidden(true)
                     }
-                    NavigationLink(destination: RecipeView()) {
+                    NavigationLink(destination: BrewView()) {
                         Text("Whats Cookin'")
                             .font(.title)
                             .navigationBarTitle("")

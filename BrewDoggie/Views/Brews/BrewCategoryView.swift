@@ -1,40 +1,42 @@
 //
-//  RecipeCategoryView.swift
+//  BrewCategoryView.swift
 //  BrewDoggie
 //
-//  Created by Marek Repinski on 2021-01-28.
+//  Created by Marek Repinski on 2021-02-02.
 //
 
 import SwiftUI
 
-struct RecipeCategoryView: View {
+struct BrewCategoryView: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
         NavigationView {
             List {
-                Image("RecipePic")
+                Image("BrewPic")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 200)
                     .clipped()
 
                 ForEach(modelData.catagoryNames, id: \.self) {name in
-                    CategoryRow(categoryName: name, items: modelData.recipeCategories[name]!)
-                    .listRowInsets(EdgeInsets())
+                    if let items = modelData.brewCategories[name] {
+                        CategoryBrewRow(categoryName: name, items: items)
+                        .listRowInsets(EdgeInsets())
+                    }
                 }
                 
                 .listRowInsets(EdgeInsets())
             }
             .listStyle(InsetListStyle())
-            .navigationTitle("Recipies:")
+            .navigationTitle("Brews:")
         }
     }
 }
 
-struct CategoryRow: View {
+struct CategoryBrewRow: View {
     var categoryName: String
-    var items: [Recipe]
+    var items: [Brew]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -45,9 +47,9 @@ struct CategoryRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach(items){ recipe in
-                        NavigationLink(destination: RecipeDetail(recipe: recipe)) {
-                            CategoryItem(recipe: recipe)
+                    ForEach(items){ brew in
+                        NavigationLink(destination: BrewDetail(brew: brew)) {
+                            CategoryBrewItem(brew: brew)
                         }
                     }
                 }
@@ -57,17 +59,17 @@ struct CategoryRow: View {
     }
 }
 
-struct CategoryItem: View {
-    var recipe: Recipe
+struct CategoryBrewItem: View {
+    var brew: Brew
     
     var body: some View {
         VStack(alignment: .leading){
-            recipe.image
+            brew.image
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
-            Text(recipe.name)
+            Text(brew.name)
                 .foregroundColor(.primary)
                 .font(.caption)
         }
@@ -75,9 +77,9 @@ struct CategoryItem: View {
     }
 }
 
-struct RecipeCategoryView_Previews: PreviewProvider {
+struct BrewCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCategoryView()
+        BrewCategoryView()
             .environmentObject(ModelData())
     }
 }
